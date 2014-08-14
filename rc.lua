@@ -32,7 +32,7 @@ do
 end
 -- }}}
 
-beautiful.init(os.getenv("HOME") .. ".config/awesome/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
 
 terminal = "urxvt" or "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "nano"
@@ -81,6 +81,20 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 mytextclock = awful.widget.textclock({ align = "right" })
 mysystray = widget({ type = "systray" })
 
+mybattery = widget({ type = "textbox" })
+function getBatteryStatus()
+  local fd=io.popen("battery_to_markup")
+  local status=fd:read()
+  fd:close()
+  return status
+end
+
+mybatteryTimer = timer({ timeout = 30 })
+mybatteryTimer:add_signal("timeout", function()
+  mybattery.text = getBatteryStatus()
+end)
+mybatteryTimer:start()
+mybattery.text = getBatteryStatus()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -158,6 +172,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+        mybattery,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -365,9 +380,9 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 
 -- awful.util.spawn_with_shell("xscreensaver -no-splash &")
-awful.util.spawn_with_shell("xrandr --output HDMI1 --mode 1920x1080")
-awful.util.spawn_with_shell("xrandr --output VGA1 --mode 1440x900 --left-of HDMI1")
+-- awful.util.spawn_with_shell("xrandr --output HDMI1 --mode 1920x1080")
+-- awful.util.spawn_with_shell("xrandr --output VGA1 --mode 1440x900 --left-of HDMI1")
 -- awful.util.spawn_with_shell("awsetbg -f ~/tresor/rebel_alliance_by_markascott-d665iau.jpg")
 awful.util.spawn_with_shell("/usr/bin/gnome-keyring-daemon --start --components=pkcs11 &")
--- awful.util.spawn_with_shell("nm-applet &")
+awful.util.spawn_with_shell("run-once nm-applet &")
 

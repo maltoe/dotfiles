@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# http://blog.lick-me.org/2013/08/yet-another-battery-widget-awesome-3-5-1/
+
+battery='BAT1'
+energy='charge'
+
+healthy='#859900'
+low='#b58900'
+discharge='#dc322f'
+
+efull=`cat /sys/class/power_supply/${battery}/${energy}_full`
+enow=`cat /sys/class/power_supply/${battery}/${energy}_now`
+capacity=`echo "$enow / $efull.0" | bc -l | sed -r -e 's/[0-9]*\.([0-9][0-9])[0-9]*/\1/'`
+if (($capacity <= 25));
+then
+  capacityColour=$low
+else
+  capacityColour=$healthy
+fi
+ 
+status=`cat /sys/class/power_supply/$battery/status`
+if [[ "$status" = "Discharging" ]]
+then
+        statusColour=$discharge
+        status="▼"
+else
+        statusColour=$healthy
+        status="▲"
+fi
+ 
+echo "<span color=\"$capacityColour\">$capacity%</span> <span color=\"$statusColour\">$status</span>"
