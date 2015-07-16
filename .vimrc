@@ -1,6 +1,3 @@
-" neocomplete.vim  nerdtree  vim-distinguished  vim-trailing-whitespace
-" neosnippet.vim   tagbar    vim-sensible
-
 execute pathogen#infect()
 
 set nocompatible
@@ -25,7 +22,7 @@ syntax on
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeIgnore=['\.o$', '\~$']
+let NERDTreeIgnore=['\.o$', '\~$', '\.lo$', '\.la$']
 
 " Reset terminal to smaller font-size.
 autocmd VimEnter * silent ! vimfont.sh
