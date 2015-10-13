@@ -9,10 +9,12 @@ set autoindent
 set background=dark
 set mouse=a
 
+" Keys.
 :imap jj <Esc>
+let mapleader = ","
 
 " 256 colors colorscheme.
- colorscheme distinguished
+colorscheme distinguished
 
 " Syntax highlighting.
 filetype plugin indent on
