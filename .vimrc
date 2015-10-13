@@ -20,6 +20,13 @@ colorscheme distinguished
 filetype plugin indent on
 syntax on
 
+" Easy-motion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1  " Case insensitivity
+nmap s <Plug>(easymotion-s)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
 " NERDtree autoload, etc.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd StdinReadPre * let s:std_in=1
