@@ -17,7 +17,6 @@ else
 fi
 exit 0
 neocomplete.vim			
-neocomplete.vim			
 neosnippet.vim			
 nerdtree			
 tagbar			
