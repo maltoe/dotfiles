@@ -382,10 +382,20 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- awful.util.spawn_with_shell("xscreensaver -no-splash &")
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+    findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+end
+
+
 -- awful.util.spawn_with_shell("xrandr --output HDMI1 --mode 1920x1080")
 -- awful.util.spawn_with_shell("xrandr --output VGA1 --mode 1440x900 --left-of HDMI1")
 -- awful.util.spawn_with_shell("awsetbg -f ~/tresor/rebel_alliance_by_markascott-d665iau.jpg")
 awful.util.spawn_with_shell("/usr/bin/gnome-keyring-daemon --start --components=pkcs11 &")
-awful.util.spawn_with_shell("run-once nm-applet &")
 
+awful.util.spawn_with_shell("xsetroot")
+run_once('nm-applet &')
