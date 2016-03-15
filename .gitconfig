@@ -13,3 +13,5 @@
   editor = vim
 [remote "origin"]
   prune = true
+[merge]
+  defaultToUpstream = true
