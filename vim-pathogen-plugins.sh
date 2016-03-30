@@ -17,8 +17,8 @@ else
 fi
 exit 0
 ctrlp.vim			6e2f8d31ff97540849a4dfe5645c0084148d4920
+editorconfig-vim			ef035f51af3adb429aedb0f82f27fdd523f6bb35
 neocomplete.vim			a21f22f19d6dbd0fb0d58b555c186138c4c9cfc9
-neosnippet.vim			e908126f402c4c0f4ff6b21c9dd0e5349f39e585
 nerdtree			4ebbb533c3faf2c480211db2b547972bb3b60f2b
 tagbar			7b36c46d17d57db34fdb0adac9ba6382d0bb5e66
 vim-distinguished			62b360dc81355b53d124cd06218a9ba2496563fc
