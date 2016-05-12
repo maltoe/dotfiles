@@ -5,6 +5,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set rnu
+set nu
 set autoindent
 set background=dark
 set mouse=a
@@ -46,6 +47,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 nmap <F8> :TagbarToggle<CR>
 
 " ctrlp with ag
+let g:ctrlp_show_hidden = 1
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
