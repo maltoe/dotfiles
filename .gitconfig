@@ -2,6 +2,7 @@
 	co = commit
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  housekeep = !git-housekeep.sh
 [color]
   branch = auto
   diff = auto
