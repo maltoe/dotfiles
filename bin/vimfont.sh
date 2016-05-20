@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Disable on second screen as it makes the terminal jump back to first
+# screen in awesome.
 SCREEN=$(echo 'return client.focus.screen' | awesome-client | xargs | cut -d ' ' -f 2)
 if [ $? == 0 ] && [ "$SCREEN" == "2" ]; then
   exit
