@@ -16,15 +16,16 @@ set smartcase
 set hlsearch
 
 " Keys.
-nmap j gj                " Go down by line on screen
-nmap k gk                " Go up by line on screen
-imap jj <Esc>            " Exit insert mode
-nmap // :nohlsearch<CR>  " Clear search highlighting
-nmap <C-b> :b#<CR>       " Back to previously opened buffer
-nmap <C-n> :bprev<CR>    " Go to previous buffer in buffer list
-nmap <C-m> :bnext<CR>    " Go to next buffer in buffer list
 let mapleader = ","
-
+nmap j gj
+nmap k gk
+imap jj <Esc>
+nmap // :nohlsearch<CR>
+nmap <C-b> :b#<CR>
+nmap <C-n> :bprev<CR>
+nmap <C-m> :bnext<CR>
+nmap <C-s> :w<CR>
+nmap <Nul> :CtrlPBuffer<CR>
 
 " 256 colors colorscheme.
 colorscheme distinguished
