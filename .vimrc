@@ -10,9 +10,16 @@ set autoindent
 set background=dark
 set mouse=a
 set backupdir=~/.vim/tmp//
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
 
 " Keys.
-:imap jj <Esc>
+nmap j gj
+nmap k gk
+imap jj <Esc>
+nmap // :nohlsearch<CR>
 let mapleader = ","
 
 " 256 colors colorscheme.
