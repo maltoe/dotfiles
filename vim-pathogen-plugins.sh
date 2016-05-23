@@ -21,7 +21,7 @@ editorconfig-vim			ef035f51af3adb429aedb0f82f27fdd523f6bb35
 neocomplete.vim			a21f22f19d6dbd0fb0d58b555c186138c4c9cfc9
 nerdtree			4ebbb533c3faf2c480211db2b547972bb3b60f2b
 tagbar			7b36c46d17d57db34fdb0adac9ba6382d0bb5e66
-vim-airline			70c16f4c46f11395bbbc30b2f0a6822669e7df87
+vim-airline			4d39cb6f2078326dd07f2ab680a0365299a2589e
 vim-distinguished			62b360dc81355b53d124cd06218a9ba2496563fc
 vim-easymotion			5c6f3cd9a713491e6b32752a05c45198aa91540a
 vim-fugitive			3439f999b138254e4bb56187fc91f91f545b4b12
