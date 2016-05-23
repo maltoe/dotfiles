@@ -16,14 +16,14 @@ else
   fi
 fi
 exit 0
-ctrlp.vim			6e2f8d31ff97540849a4dfe5645c0084148d4920
+ctrlp.vim			28fce0fb860fe8df0915da1de1fb6e90d6ab2edc
 editorconfig-vim			ef035f51af3adb429aedb0f82f27fdd523f6bb35
 neocomplete.vim			a21f22f19d6dbd0fb0d58b555c186138c4c9cfc9
 nerdtree			4ebbb533c3faf2c480211db2b547972bb3b60f2b
 tagbar			7b36c46d17d57db34fdb0adac9ba6382d0bb5e66
 vim-airline			70c16f4c46f11395bbbc30b2f0a6822669e7df87
 vim-distinguished			62b360dc81355b53d124cd06218a9ba2496563fc
-vim-easymotion			649120e90e92bc2ae5361693fa1e4dd2d02c1822
-vim-fugitive			008b9570860f552534109b4f618cf2ddd145eeb4
+vim-easymotion			5c6f3cd9a713491e6b32752a05c45198aa91540a
+vim-fugitive			3439f999b138254e4bb56187fc91f91f545b4b12
 vim-sensible			2fb074e84169e177045e8bdb6ceb7eded3a80e8f
 vim-trailing-whitespace			478b217d299b6f5938b43a4929d6bb0907cc3a56
