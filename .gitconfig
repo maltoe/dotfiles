@@ -1,8 +1,10 @@
 [alias]
-	co = commit
+  s = status
+  co = commit
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   housekeep = !git-housekeep.sh
+  rco = !git-rubocop-commit.sh
 [color]
   branch = auto
   diff = auto
