@@ -10,6 +10,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'jeetsukumaran/vim-buffergator'
 call plug#end()
 
 set nocompatible
@@ -26,6 +27,9 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+
+" My terminals have 256 colors.
+let &t_Co=256
 
 " Keys.
 let mapleader = ","
