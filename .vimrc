@@ -1,4 +1,16 @@
-execute pathogen#infect()
+" Plugins managed with vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'bronson/vim-trailing-whitespace'
+call plug#end()
 
 set nocompatible
 set tabstop=2
