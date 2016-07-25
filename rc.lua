@@ -34,7 +34,7 @@ end
 
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
 
-terminal = "urxvt" or "x-terminal-emulator"
+terminal = "st" or "urxvt" or "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
