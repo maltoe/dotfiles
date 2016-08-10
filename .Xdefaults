@@ -17,6 +17,8 @@ URxvt*keysym.End: \033[8~
 URxvt.urgentOnBell: true
 URxvt.dynamicColors: on
 
+XTerm*faceName:Droid Sans Mono:size=11:antialias=true
+
 ! URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=14:antialias=true:hinting=true
 ! URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
 ! URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true

@@ -34,7 +34,7 @@ end
 
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
 
-terminal = "st" or "urxvt" or "x-terminal-emulator"
+terminal = "xterm" or "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
@@ -394,7 +394,8 @@ end
 
 
 -- awful.util.spawn_with_shell("xrandr --output HDMI1 --mode 1920x1080")
--- awful.util.spawn_with_shell("xrandr --output VGA1 --mode 1440x900 --left-of HDMI1")
+ awful.util.spawn_with_shell("xrandr --output LVDS1 --mode 1366x768")
+ awful.util.spawn_with_shell("xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1")
 -- awful.util.spawn_with_shell("awsetbg -f ~/tresor/rebel_alliance_by_markascott-d665iau.jpg")
 awful.util.spawn_with_shell("/usr/bin/gnome-keyring-daemon --start --components=pkcs11 &")
 
