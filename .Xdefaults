@@ -1,31 +1,13 @@
-! urxvt config.
-URxvt*transparent: false
-URxvt*tintColor: Blue
-! URxvt*shading: 40
-URxvt*saveLines: 64000
-URxvt*foreground: White
-URxvt*background: Black
-URxvt*font: xft:Inconsolata:pixelsize=18:antialias=true:hinting=true
-URxvt*boldFont: xft:Inconsolata:bold:pixelsize=19:antialias=true:hinting=true
-URxvt*color4: RoyalBlue
-URxvt*color12: RoyalBlue
-URxvt*scrollBar: auto
-URxvt*scrollBar_right: true
-URxvt*scrollstyle: rxvt
-URxvt*keysym.Home: \033[7~
-URxvt*keysym.End: \033[8~
-URxvt.urgentOnBell: true
-URxvt.dynamicColors: on
-
-XTerm*faceName:Droid Sans Mono:size=11:antialias=true
-
-! URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=14:antialias=true:hinting=true
-! URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
-! URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
-! URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
-! URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
-! URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
-! URxvt*font: xft:terminus:pixelsize=15
-! URxvt*boldFont: xft:terminus:bold:pixelsize=15
-! URxvt*font:-*-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
-! URxvt*boldFont:-*-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+xterm*faceName:           terminusbold:pixelsize=16
+xterm*dynamicColors:      true
+xterm*utf8:               2
+xterm*eightBitInput:      true
+xterm*saveLines:          9000
+xterm*loginShell:         true
+xterm*toolBar:            false
+! xterm*jumpScroll:         true
+! xterm*multiScroll:        true
+xterm*Background:         black
+xterm*Foreground:         white
+xterm*cursorColor:        white
+xterm*pointerColor:       white
