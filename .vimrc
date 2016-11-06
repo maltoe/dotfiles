@@ -13,13 +13,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 set nocompatible
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set rnu
+" disabled relative line numbers due to extreme slowness
+" set rnu
 set nu
 set autoindent
 set background=dark
@@ -57,6 +59,8 @@ syntax on
 
 " Ruby files syntax highlighting is slow
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 foldmethod=manual nocursorline
+let ruby_no_expensive = 1
+let ruby_fold = 0
 
 " Easy-motion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
