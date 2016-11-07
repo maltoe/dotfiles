@@ -31,6 +31,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+set nofoldenable
 
 " My terminals have 256 colors and vertical bar support.
 let &t_Co=256
@@ -60,7 +61,6 @@ syntax on
 " Ruby files syntax highlighting is slow
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 foldmethod=manual nocursorline
 let ruby_no_expensive = 1
-let ruby_fold = 0
 
 " Easy-motion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
