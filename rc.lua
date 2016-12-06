@@ -190,8 +190,11 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    -- Window/tag switching
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
+    awful.key({ modkey,           }, "h",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
+    awful.key({ modkey,           }, "l",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
     awful.key({ modkey,           }, "j",
@@ -234,7 +237,11 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+
+    -- Our specials
     awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("toggle_touchpad") end),
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("smooth_backlight.rb down") end),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("smooth_backlight.rb up") end),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
