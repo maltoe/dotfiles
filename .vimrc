@@ -14,7 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'vim-ruby/vim-ruby'
-Plug 'henrik/vim-ruby-runner'
+Plug 'godlygeek/tabular'
 call plug#end()
 
 set nocompatible
@@ -73,9 +73,6 @@ syntax on
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 foldmethod=manual nocursorline
 autocmd FileType html setlocal noautoindent nocindent nosmartindent indentexpr&
 let ruby_no_expensive = 1
-
-" vim-ruby-runner
-let g:RubyRunner_open_below = 1
 
 " Easy-motion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
