@@ -12,3 +12,9 @@ xterm*Background:         black
 xterm*Foreground:         white
 xterm*cursorColor:        white
 xterm*pointerColor:       white
+xterm*cutNewline:         false
+xterm*cutToBeginningOfline: false
+xterm*on3Clicks:  regex [^ \n]+
+xterm*on4Clicks:  regex .*
+xterm*on5Clicks:  line
+xterm*translations:       #override Shift <Btn1Up>: exec-formatted("google-chrome '%t'", PRIMARY)
