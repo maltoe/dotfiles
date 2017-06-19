@@ -124,7 +124,7 @@ mybattery = wibox.widget.textbox(getBatteryStatus())
 
 mybatteryTimer = timer({ timeout = 30 })
 mybatteryTimer:connect_signal("timeout", function()
-  mybattery:set_text( getBatteryStatus() )
+  mybattery:set_markup_silently(getBatteryStatus())
 end)
 mybatteryTimer:start()
 
