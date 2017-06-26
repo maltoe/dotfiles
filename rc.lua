@@ -282,8 +282,9 @@ globalkeys = awful.util.table.join(
 
     -- Our specials
     awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("toggle_touchpad") end),
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("smooth_backlight.rb down") end),
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("smooth_backlight.rb up") end),
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("smooth_backlight.rb lcd down") end),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("smooth_backlight.rb lcd up") end),
+    awful.key({ }, "XF86LaunchA", function () awful.util.spawn("smooth_backlight.rb kbd") end),
 
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -514,5 +515,5 @@ end
 awful.util.spawn_with_shell("/usr/bin/gnome-keyring-daemon --start --components=pkcs11 &")
 awful.util.spawn_with_shell("xsetroot")
 
-run_once("redshift -c ~/.config/redshift.config &")
 run_once('nm-applet &')
+
