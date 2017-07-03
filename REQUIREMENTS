@@ -3,3 +3,11 @@ the silver searcher (ag)
 xterm
 fonts-droid
 xfonts-terminus
+
+=== For vim compilation (incomplete)
+libperl-dev
+liblua-dev
+libluajit
+xorg-dev
+
+

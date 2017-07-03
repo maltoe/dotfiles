@@ -1,0 +1,1 @@
+./configure --prefix=/home/malte/local --with-luajit --with-x --without-gnome --enable-multibyte --enable-fontset --enable-cscope --enable-luainterp=yes --enable-rubyinterp=yes --enable-pythoninterp=yes --enable-python3interp=yes --enable-perlinterp=yes --enable-gui
