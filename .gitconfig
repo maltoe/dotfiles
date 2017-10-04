@@ -12,6 +12,8 @@
   status = auto
 [push]
   default = simple
+[pull]
+  ff = only
 [core]
   editor = vim
 [remote "origin"]
