@@ -88,5 +88,10 @@ if [ -n "$DISPLAY" ]; then
   xset b off
 fi
 
+eval "$(ssh-agent -s)" >/dev/null
+ssh-add &>/dev/null
+
 export VISUAL=vim
 export EDITOR=$VISUAL
+
+export TZ='Europe/Berlin'
