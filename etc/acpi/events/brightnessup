@@ -1,0 +1,2 @@
+event=video/brightnessup
+action=/home/malte/local/bin/smooth_backlight.rb lcd up

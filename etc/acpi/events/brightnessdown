@@ -1,0 +1,2 @@
+event=video/brightnessdown
+action=/home/malte/local/bin/smooth_backlight.rb lcd down
