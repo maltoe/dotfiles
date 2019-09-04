@@ -1,0 +1,1 @@
+./configure --with-luajit --without-x --without-gnome --enable-multibyte --enable-cscope --enable-luainterp=yes --enable-rubyinterp=yes --enable-pythoninterp=yes --enable-python3interp=yes --enable-perlinterp=yes
