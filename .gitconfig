@@ -16,6 +16,7 @@
   ff = only
 [core]
   editor = vim
+  excludesfile = /Users/malte/.gitignore_global
 [remote "origin"]
   prune = true
 [merge]
