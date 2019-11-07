@@ -92,6 +92,9 @@ autocmd FileType ruby setlocal ts=2 sts=2 sw=2 foldmethod=manual nocursorline
 autocmd FileType html setlocal noautoindent nocindent nosmartindent indentexpr&
 let ruby_no_expensive = 1
 
+" HTML
+imap <C-t> <></><Esc>5hdiwp3lpT>i
+
 " Easy-motion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1  " Case insensitivity
