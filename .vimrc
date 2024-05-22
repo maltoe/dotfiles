@@ -17,16 +17,6 @@ Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-
 call plug#end()
 
 " Disable parenthesis matching as it's painfully slow with ruby syntax.
@@ -67,6 +57,9 @@ nmap <C-m> :bnext<CR>
 nmap <C-s> :w<CR>
 nmap <Nul> :CtrlPBuffer<CR>
 nmap <Leader>n :NERDTreeFind<CR>
+
+" F8 disables autoindentation locally
+:nnoremap <Leader>i :setl noai nocin nosi inde=<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -125,7 +118,7 @@ let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build\|deps\|_deps\|_plts'
 " let g:ctrlp_switch_buffer = 0
 if executable('ag')
   " Use Ag over Grep

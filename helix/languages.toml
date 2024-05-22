@@ -1,0 +1,9 @@
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+language-servers = ["nextls"]
+
+[language-server.nextls]
+command = "/home/malte/local/bin/next-ls"
+args = ["--stdio=true"]
+config = { experimental = { completions = { enable = true } } }
