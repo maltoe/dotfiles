@@ -1,7 +1,7 @@
 [[language]]
 name = "elixir"
 scope = "source.elixir"
-language-servers = ["nextls"]
+language-servers = [{ name = "nextls", except-features = ["diagnostics"] }]
 
 [language-server.nextls]
 command = "/home/malte/local/bin/next-ls"
