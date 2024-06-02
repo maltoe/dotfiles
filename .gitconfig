@@ -1,10 +1,14 @@
 [alias]
   s = status
-  co = commit
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  housekeep = !git-housekeep.sh
-  rco = !git-rubocop-commit.sh
+  housekeep = "!f(){\
+                git remote prune origin; \
+                git branch -vv \
+                | grep 'origin/.*: gone]' \
+                | awk '{print $1}' \
+                | xargs git branch -D;\
+              }; f"
 [color]
   branch = auto
   diff = auto
@@ -15,8 +19,8 @@
 [pull]
   ff = only
 [core]
-  editor = vim
-  excludesfile = /Users/malte/.gitignore_global
+  editor = hx
+  excludesfile = ~/.gitignore_global
 [remote "origin"]
   prune = true
 [merge]

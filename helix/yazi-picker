@@ -1,7 +1,0 @@
-#!/bin/bash
-
-paths=$(tmux split-window yazi --chooser-file=/dev/stdout | while read -r; do printf "%q " "$REPLY"; done)
-
-if [[ -n "$paths" ]]; then
-  echo "$paths"
-fi
