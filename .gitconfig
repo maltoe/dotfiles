@@ -1,5 +1,5 @@
 [alias]
-  s = status
+  s = status -sb
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   housekeep = "!f(){\
@@ -21,14 +21,18 @@
 [core]
   editor = hx
   excludesfile = ~/.gitignore_global
->>>>>>> a1195bb (update gitconfig)
+  pager = less -F -X
 [remote "origin"]
   prune = true
 [merge]
   defaultToUpstream = true
 [commit]
   gpgsign = true
-[gpg "ssh"]
-  allowedSignersFile = ~/.git_allowed_signers
 [init]
   defaultBranch = main
+[user]
+  email = maltoe@posteo.de
+  name = Malte Rohde
+  signingkey = 386939C6AC0EA111
+[includeIf "gitdir:~/work/marko/"]
+  path = ~/work/marko/gitconfig
