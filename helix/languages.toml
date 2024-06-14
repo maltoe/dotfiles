@@ -1,9 +1,12 @@
 [[language]]
 name = "elixir"
 scope = "source.elixir"
-language-servers = [{ name = "nextls", except-features = ["diagnostics"] }]
+language-servers = [{ name = "next-ls", except-features = ["diagnostics"] }]
 
-[language-server.nextls]
-command = "/home/malte/local/bin/next-ls"
+[language-server.next-ls]
+command = "next-ls"
 args = ["--stdio=true"]
 config = { experimental = { completions = { enable = true } } }
+
+# [language-server.elixir-ls]
+# command = "elixir-ls"

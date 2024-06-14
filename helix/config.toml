@@ -1,10 +1,14 @@
 theme = "monokai"
 
 [editor]
-auto-format = false
+auto-format = true
 line-number = "relative"
-gutters = ["diagnostics", "spacer", "line-numbers"]
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "spacer"]
 bufferline = "always"
+
+[editor.file-picker]
+git-ignore = true
+
 
 [editor.cursor-shape]
 insert = "bar"
