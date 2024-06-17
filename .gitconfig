@@ -9,6 +9,12 @@
                 | awk '{print $1}' \
                 | xargs git branch -D;\
               }; f"
+  mainup = "!f(){\
+                git checkout main && \
+                git pull --ff-only && \
+                git checkout - && \
+                git rebase -i main; \
+              }; f"
 [color]
   branch = auto
   diff = auto
@@ -26,13 +32,11 @@
   prune = true
 [merge]
   defaultToUpstream = true
-[commit]
-  gpgsign = true
-[init]
-  defaultBranch = main
 [user]
   email = maltoe@posteo.de
   name = Malte Rohde
   signingkey = 386939C6AC0EA111
 [includeIf "gitdir:~/work/marko/"]
   path = ~/work/marko/gitconfig
+[commit]
+  gpgsign = true
