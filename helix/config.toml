@@ -9,7 +9,6 @@ bufferline = "always"
 [editor.file-picker]
 git-ignore = true
 
-
 [editor.cursor-shape]
 insert = "bar"
 
@@ -19,8 +18,8 @@ X = "extend_line_above" # Shift+x to select the whole line above
 D = ["extend_to_line_end", "change_selection"] # Wipe until end of line and edit
 c = ["trim_selections", "change_selection"] # Make 'c' automatically strip the selection of extra whitespace
 a = ["append_mode", "collapse_selection"] # Remove the selection when entering insert mode with 'a'
-"tab" = "goto_next_function" # Select and jump to the next function via Treesitter
-"S-tab" = "goto_prev_function" # Select and jump to the previous function via Treesitter
+"C-n" = [":new", ":insert-output lf -print-selection", "split_selection_on_newline", "goto_file", "goto_last_modification", "goto_last_modified_file", ":buffer-close!", ":redraw"]
 
 [keys.insert]
 j = { j = "normal_mode" }
+
