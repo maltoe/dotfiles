@@ -1,0 +1,23 @@
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+# language-servers = [{ name = "next-ls", except-features = ["diagnostics"] }, { name = "lsp-ai" }]
+# language-servers = [{ name = "next-ls", except-features = ["diagnostics"] }]
+
+[language-server.expert]
+command = "/home/malte/local/bin/expert_linux_amd64"
+args = ["--stdio"]
+
+[[language]]
+name = "elixir"
+language-servers = ["expert"]
+
+[[language]]
+name = "heex"
+language-servers = ["expert"]
+
+# args = ["--stdio=true"]
+# config = { experimental = { completions = { enable = true } } }
+
+# [language-server.elixir-ls]
+# command = "elixir-ls"

@@ -40,3 +40,5 @@
   path = ~/work/marko/gitconfig
 [commit]
   gpgsign = true
+[init]
+  defaultBranch = main
